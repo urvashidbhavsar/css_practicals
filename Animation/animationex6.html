@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loading {
+            height: 200px;
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 190px auto;
+        }
+
+        .maindiv {
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .dot1,
+        .dot2,
+        .dot3 {
+            height: 6px;
+            width: 6px;
+            background-color: teal;
+            margin: 5px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 5px black;
+        }
+
+        .dot1 {
+            animation: dotmove 0.8s ease infinite alternate;
+        }
+
+        .dot2 {
+            animation: dotmove 0.8s ease 0.5s infinite alternate;
+        }
+
+        .dot3 {
+            animation: dotmove 0.8s ease 1s infinite alternate;
+        }
+
+        .text {
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        /* dots animation */
+        @keyframes dotmove {
+            0% {
+                transform: translateY(0px)
+            }
+
+            100% {
+                transform: translateY(-4px);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="loading">
+        <div class="text">Loading</div>
+        <div class="maindiv">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+        </div>
+    </div>
+</body>
+
+</html>
